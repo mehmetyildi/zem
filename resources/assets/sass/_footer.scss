@@ -1,0 +1,53 @@
+@import 'variables';
+
+footer{
+  
+  .hr-color{
+    border-color: #979797!important
+  }
+
+  background-color:#011C4B;
+
+  h5,#bulletinRegular{
+    font-family: 'GTWalsheimPro-Medium';
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0.27px;
+  }
+
+  p{
+    font-family: 'GTWalsheimPro-Light';
+    font-weight: 200;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.21px;
+  }
+
+  li{
+
+    a{
+      font-family: 'GTWalsheimPro-Light';
+      font-weight: 200;
+      font-size: 14px;
+      color: #FFFFFF;
+      line-height: 18px;
+      text-decoration: none;
+      transition: .5s;
+      &:hover{
+        transition: .5s;
+        color: #E04403;
+        text-decoration: none;
+      }
+    }
+
+  }
+.input-group-text,.form-control{
+  padding-right: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #ffffff;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: unset;
+}
+}

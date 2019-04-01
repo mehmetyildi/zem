@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="10px" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="İletişim" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iletişim" transform="translate(-697.000000, -2059.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="2360"></rect>
+            <g id="application-form" transform="translate(351.000000, 1734.000000)" fill="#263272">
+                <g id="buton" transform="translate(346.000000, 320.000000)">
+                    <path d="M4.90909091,5 C4.90909091,5 6.27272727,5 9,5 L4.09090909,15 L0,15 C3.27272727,8.33333333 4.90909091,5 4.90909091,5 Z" id="Rectangle-7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,61 @@
+
+
+// Body
+$body-bg: #ffffff;
+
+// Typography
+$font-family-sans-serif: "Roboto-Regular", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #003BA2;
+$orange :#E04403;
+$light-grey:#ebebeb;
+$grey:#ededed;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #FF0000;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$menuColor:#231A1D;
+
+
+
+
+
+
+// DEVICE LIST //
+$xs-max: "only screen and (max-width:0px)";
+$xs-sm: "only screen (max-width: none) and (max-width:767px)";
+
+$sm-max: "only screen and (max-width:768px)";
+$sm-md: "only screen (max-width: 768px) and (max-width:991px)";
+
+$md-max: "only screen and (max-width:992px)";
+$md-lg: "only screen (max-width: 992px) and (max-width:1199px)";
+
+$lg-max: "only screen and (max-width:1200px)";
+
+
+
+//Const Color Types
+
+.text-blue{
+  color:$blue !important;
+}
+
+.text-orange{
+  color: $orange;
+}
+
+.bg-grey{
+  background-color: gr;
+}
+
+
+

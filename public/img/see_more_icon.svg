@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.5%" y="-1.5%" width="103.0%" height="103.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hafif-ve-orta-yük" transform="translate(-969.000000, -1728.000000)">
+            <g id="Group-Copy-16" transform="translate(970.000000, 1729.000000)">
+                <g id="Group-2">
+                    <circle id="Oval" stroke="#E04F13" filter="url(#filter-1)" cx="16.5" cy="16.5" r="16.5"></circle>
+                    <polyline id="Path-7" stroke="#E04403" stroke-linecap="round" stroke-linejoin="round" points="14 13 20 16.9421476 14 21"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

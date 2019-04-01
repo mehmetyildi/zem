@@ -1,0 +1,512 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+// Variables
+@import 'variables';
+//Layout
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import 'header';
+@import 'footer';
+@import 'about';
+@import 'product-category';
+@import 'news-details';
+@import 'fonts';
+@import 'product';
+@import 'blog';
+@import 'project';
+@import 'contact';
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+.custom-pt {
+  padding-top: 164px;
+}
+
+.line {
+  width: 2px;
+  height: 100%;
+  background-color: #E04403;
+
+
+}
+
+.blue-bg-position {
+  top: 40%;
+  position: absolute;
+}
+
+.bg-blue {
+  background: #172978;
+  mix-blend-mode: multiply;
+}
+
+.home-sub-text {
+  top: 60%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+#primary-home-title {
+  position: absolute;
+  z-index: 3;
+
+  #home-title {
+    text-shadow: rgba(0, 0, 0, 0.5) 4px 4px 5px;
+    font-family: GTWalsheimPro-Bold;
+    font-size: 69px;
+    color: #FFFFFF;
+    letter-spacing: 0.27px;
+    text-align: left;
+    padding-top: 140px;
+  }
+
+
+}
+
+.p-c-home {
+  font-family: GTWalsheimPro-UltraLight;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 0.2px;
+}
+
+.pt-c-70 {
+  padding-top: 70px;
+}
+
+.bg-blue {
+  background-color: #003DA6;
+  width: 100%;
+  height: 596px;
+  z-index: 2;
+  top: 40%;
+
+}
+
+.bg-filtered-blue {
+  background-color: #003DA6;
+  mix-blend-mode: multiply;
+}
+
+
+.line-test span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.line-test span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.scroll-title {
+  transform: rotate(-90deg);
+  font-family: GTWalsheimPro-Light;
+  font-size: 16px;
+  color: #003DA6;
+  letter-spacing: 0.26px;
+  text-align: center;
+}
+
+.about-divider {
+  transform: rotate(-90deg);
+  font-family: GTWalsheimPro-Light;
+  font-size: 16px;
+  color: #E5652F;
+  letter-spacing: 0.26px;
+  text-align: center;
+}
+
+.home-about-text {
+  font-family: GTWalsheimPro-Light;
+  font-size: 36px;
+  color: #E04403;
+  letter-spacing: 0.27px;
+
+}
+
+
+@media #{$lg-max} {
+  #primary-home-title #home-title {
+    padding-top: 180px;
+  }
+  .home-sub-text {
+    top: 78%;
+  }
+  .bg-blue {
+    height: 530px;
+
+  }
+
+  .blue-bg-position {
+    top: 35%;
+  }
+}
+
+@media #{$md-max} {
+  #primary-home-title #home-title {
+    font-size: 55px;
+  }
+  .home-sub-text {
+    top: 70%;
+  }
+  .bg-blue {
+    height: 500px;
+
+  }
+
+  .blue-bg-position {
+    top: 25%;
+  }
+}
+
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.home-list {
+  margin-top: 195px;
+
+  h3 {
+    font-family: GTWalsheimPro-Light
+  }
+
+  a {
+    color: $blue;
+    font-family: GTWalsheimPro-Light
+
+  }
+
+  ul {
+    margin-left: 0px;
+    padding-left: 0px;
+
+    li {
+      font-family: GTWalsheimPro-UltraLight;
+      margin-left: 0px;
+      font-size: 24px;
+      list-style-type: none;
+
+      &:before {
+        content: "\025cb";
+        color: #E04403;
+        font-size: 1em;
+        padding-right: 1.1225em;
+        position: relative;
+        top: 0em;
+      }
+    }
+  }
+}
+
+.content-holder {
+  background-color: rgb(245, 245, 245);
+  background-image: url('../../img/zem_bg.png');
+
+}
+
+
+//Home Page Slider
+
+.slider-container {
+
+  .slider-filter {
+    top: 0;
+    left: 0;
+    padding: 0px 15px;
+
+    img {
+      mix-blend-mode: multiply
+    }
+  }
+
+  .slide-text-container {
+    bottom: -8px;
+    transform: rotate(-90deg);
+    transform-origin: 15px 0px;
+    left: 35px;
+
+    .dash-line {
+      height: 1px;
+      width: 300px;
+      background-color: white;
+      vertical-align: middle;
+    }
+  }
+
+
+  .navigation-container {
+    margin-top: -229px;
+
+    .align-self-end {
+      margin-bottom: 86px;
+    }
+
+    .navigation-btn {
+      cursor: pointer;
+
+      background: $blue;
+      width: 70px;
+      height: 70px;
+
+      img {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+      }
+
+      &:hover {
+        -webkit-transition: .8s;
+        -moz-transition: .8s;
+        -ms-transition: .8s;
+        -o-transition: .8s;
+        transition: .8s;
+        background-color: #6687CC;
+      }
+
+      -webkit-transition: .8s;
+      -moz-transition: .8s;
+      -ms-transition: .8s;
+      -o-transition: .8s;
+      transition: .8s;
+    }
+
+    .right-btn {
+      img {
+        transform: translate(-50%, -50%) rotate(180deg)
+      }
+    }
+  }
+}
+
+//Home Page Slider End
+
+
+//Dash Line fpr home page caption  sectipn
+
+.dashed-line-container-1 {
+  bottom: -8px;
+  transform: rotate(-90deg);
+  transform-origin: 15px 0px;
+  left: 35px;
+  width: 400px;
+  margin-bottom: 30px;
+
+
+  .dash-line {
+    height: 1px;
+    width: 200px;
+    background-color: #E04403;
+
+    vertical-align: middle;
+  }
+
+  .dash-text {
+    color: #E04403;
+    letter-spacing: 2px;
+    font-size: 18px;
+  }
+}
+
+
+.home-caption {
+  .home-about-text-container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+.pt-c-section {
+  padding-top: 73px;
+}
+
+
+//Home Custom Slider
+.mySlides {
+  display: none
+}
+
+.faden {
+  -webkit-animation-name: faden;
+  -webkit-animation-duration: 1.5s;
+  animation-name: faden;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes faden {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes faden {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.custom-button {
+  .line {
+    background-color: $blue;
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    display: none;
+  }
+
+
+  svg {
+    fill: white;
+    transition: 1s;
+  }
+
+  &:hover {
+    transition: 1s;
+
+    #ürünler {
+      transition: 1s;
+      fill: $blue
+    }
+
+    #Path-7 {
+      stroke: white;
+    }
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+
+@media #{$lg-max} {
+  .home-list {
+
+    margin-top: 85px;
+
+    &:first-of-type {
+      margin-top: 45px;
+    }
+  }
+
+  .slider-container {
+    .slide-text-container {
+      left: 22px;
+    }
+  }
+}
+
+@media #{$sm-max} {
+  .home-caption {
+    .home-about-text-container {
+
+      h2 {
+        color: $blue;
+        padding-bottom: 15px;
+
+        &::after {
+          display: inline-block;
+          content: "";
+          border-top: .1rem solid $blue;
+          width: 8rem;
+          margin: -12px 1rem;
+          transform: translateY(-1rem);
+        }
+      }
+
+      .home-about-text {
+        font-size: 26px;
+      }
+    }
+
+    .dashed-line-container-1 {
+      display: none;
+    }
+  }
+
+
+  .home-list {
+    margin-top: 0;
+  }
+
+  .home-gallery {
+    padding-top: 0px;
+
+    .col-md-10 {
+      padding: 0px !important;
+    }
+
+    .col-md-12 {
+      padding: 0px !important;
+    }
+  }
+
+  .home-caption {
+    margin-top: 60%;
+  }
+  .bg-blue {
+    top: 100%;
+    height: 570px;
+
+  }
+  .home-sub-text {
+    top: 50%;
+  }
+  .blue-bg-position {
+    top: 80%;
+
+  }
+
+
+  #primary-home-title {
+    position: absolute;
+    top: 98%;
+
+    #home-title {
+      font-family: GTWalsheimPro-Bold;
+      font-size: 41px;
+      color: #FFFFFF;
+      letter-spacing: 0.27px;
+      text-align: left;
+      padding-top: 0px;
+      padding: 20px 15px;
+
+    }
+  }
+}
+
+
+.dashed-line-container-2 {
+  margin-bottom: -125px;
+  dash-line-1{
+
+  }
+  .dash-line{
+    background: repeating-linear-gradient( to right, $blue, $blue 10px, #f5f5f5 10px, #f5f5f5 20px );
+  }
+}
+
+#project-caption{
+  height: 153px;
+  max-height: 200px;
+  overflow: hidden;
+}

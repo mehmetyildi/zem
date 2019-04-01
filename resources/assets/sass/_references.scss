@@ -1,0 +1,38 @@
+.sectorSelection{
+    max-width: 300px;
+}
+
+.singleReferenceCard{
+    border: 1px solid #f2f2f2;
+    position: relative;
+    margin-bottom: 30px;
+    @include transition(all, 0.30s, ease-in-out);
+    padding: 50px;
+
+    min-height:180px;
+    .projectLink{
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right:0;
+        bottom: 10px;
+        text-align: center;
+        @include transition(all, 0.30s, ease-in-out);
+    }
+    &:hover{
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+        .projectLink{
+            opacity: 1;
+        }
+    }
+}
+.btn.btn-secondary{
+    font-size: 14px;
+    @include poppins();
+    font-weight:200;
+    background: #F49C00;
+    border-radius:0;
+    border-color: #cdcdcd;
+    padding-right:30px;
+    padding-left: 30px;
+}

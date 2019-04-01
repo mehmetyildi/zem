@@ -1,0 +1,37 @@
+.contact {
+  .intro {
+    background-image: url('../../../img/contact_bg.png');
+    background-attachment: fixed;
+    padding-top: 187px;
+    padding-bottom: 225px;
+  }
+  .form-intro {
+    h2 {
+      font-family: GTWalsheimPro-Medium;
+      font-size: 36px;
+      color: #FFFFFF;
+      letter-spacing: 0.64px;
+    }
+    p {
+      font-family: GTWalsheimPro-ultraLight;
+      font-size: 32px;
+      color: #FFFFFF;
+      letter-spacing: 0.58px;
+    }
+    .form-btn{
+      letter-spacing: 1px;
+    }
+  }
+  .contact-card span{
+    font-family: GTWalsheimPro-ultraLight;
+    font-size: 16px;
+    color: #424242;
+    letter-spacing: 0.12px;
+  }
+  h1{
+    font-family: GTWalsheimPro-Medium;
+    font-size: 46px;
+    color: #033695;
+    letter-spacing: 0.18px;
+  }
+}

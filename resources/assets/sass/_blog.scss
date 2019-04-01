@@ -1,0 +1,165 @@
+
+p.menuTag {
+  font-family: GTWalsheimPro-UltraLight;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0.26px;
+  text-align: center;
+  display: table;
+  white-space: nowrap;
+
+  &:before {
+    border-top: 1px solid #FFFFFF;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 60%;
+  }
+
+  &:before {
+    right: 1.5%;
+  }
+}
+
+.blog-title > h1 {
+
+  font-family: GTWalsheimPro-Medium;
+  font-size: 30px;
+  color: #FFFFFF;
+  letter-spacing: 0.12px;
+}
+
+.blog-text {
+
+  font-family: GTWalsheimPro-Regular;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  text-align: left;
+  line-height: 24px;
+}
+
+.blog-content-intro {
+
+  font-family: GTWalsheimPro-Regular;
+  font-size: 18px;
+  color: #2d2d2d;
+  letter-spacing: -0.3px;
+  text-align: justify;
+  line-height: 24px;
+}
+
+
+.blog-banner-bg {
+  background-color: #003DA6;
+}
+
+.card-item {
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  background-color: #f5f5f5;
+
+  p.item-no {
+    font-family: GTWalsheimPro-Light;
+    font-size: 16px;
+    color: #E04403;
+    letter-spacing: 0.26px;
+    text-align: center;
+    display: table;
+    white-space: nowrap;
+    margin-bottom: 0;
+
+    &:before {
+      border-top: 1px solid #E04403;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 85%;
+    }
+
+  }
+
+  &:hover {
+    -webkit-transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+    -o-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+    background-color: #003BA2;
+
+    .svg #Oval, #Path-7 {
+      stroke: white;
+    }
+
+
+    .custom-button{
+      span{
+        color:white;
+      }
+
+      .line{
+        background-color: white;
+      }
+    }
+
+
+    p.item-no {
+      color: white;
+    }
+
+    p.item-no:before {
+      border-color: white
+    }
+
+    .shorten-news {
+      color: white;
+    }
+
+    .blog-content-intro {
+      color: white;
+    }
+
+    #see-more-btn {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.project-title {
+  font-family: GTWalsheimPro-Light;
+  font-size: 26px;
+  color: #2d2d2d;
+}
+
+.bg-grey {
+  background-color: #ebebeb;
+}
+
+.hr-style {
+  border-top: 2px solid #ffffff;
+}
+
+.bulletin-btn {
+  float: left;
+  text-decoration: none;
+  font-family: GTWalsheimPro-light;
+  font-size: 18px;
+  color: #E04403;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
+    color: #E04403;
+  }
+}
+
+.other-projects .project-card {
+
+  display: inline-block;
+
+}
+

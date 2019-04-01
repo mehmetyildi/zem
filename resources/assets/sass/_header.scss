@@ -1,0 +1,155 @@
+@import 'variables';
+
+
+
+header {
+  .line{
+    width:2px;
+    height: 100%;
+    background-color: #E04403;
+
+
+  }
+
+  .show{
+    width: 100%;
+    display: block;
+  }
+
+  #dropdown-primary>#dropdown-menu-c>li>
+
+  .overflow-hidden>.side-menu-title{
+    transform: rotate(-90deg);
+    font-family: GTWalsheimPro-Light;
+    font-size: 20px;
+    color: #003DA6;
+    letter-spacing: 0.32px;
+    text-align: right;
+  }
+
+  #inner-menu #inner-menu-item{
+    list-style-type: circle;
+    font-family: GTWalsheimPro-Medium;
+    font-size: 18px;
+    color: #E04403;
+    letter-spacing: 0.2px;
+    text-align: justify;
+  }
+
+  ul>li{
+    font-family: 'GTWalsheimPro-Light';
+    font-size: 34px;
+    color: #003DA6;
+    letter-spacing: 0.69px;
+    line-height: 53px;
+    list-style-type: none;
+    &:hover{
+      color: #E04403;
+    }
+   /* &::before {
+      position: absolute;
+      bottom: 3px;
+      right: 0;
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      background: #003DA6;
+      transition: width .1s;
+    }
+*/
+  }
+
+  #dropdown-primary>#dropdown-menu-c{
+    border: none;
+  }
+
+  #inner-menu #inner-menu-item ul>li:hover::before {
+    width: 100%;
+
+  }
+
+  #dropdown-primary .dropup, .dropright, .dropdown, .dropleft{
+    position: unset;
+  }
+
+  #navbar-primary .navbar-nav > li > a {
+        position: relative;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-transform: capitalize;
+        font-family: 'GTWalsheimPro-Medium';
+        font-size: 18px;
+        color: #003DA6;
+        letter-spacing: 0.29px;
+        text-align: center;
+
+        &:hover{
+          transition: .5s;
+          color:  #003DA6;
+          text-decoration: none;
+        }
+
+  }
+
+  .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #003DA6;
+    transition: width .1s;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+  }
+
+  .nav-link:hover::after {
+    width: 40%;
+
+  }
+
+  .dropdown-toggle::after {
+    display: inline-block;
+   margin-left: 0;
+    vertical-align: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+
+  }
+
+
+
+  @media #{$xs-max} {
+
+
+  }
+
+  @media #{$sm-max} {
+
+
+  }
+
+  @media #{$md-max} {
+    #navbar-primary .navbar-nav > li > a {
+
+      padding-left: 24px;
+      padding-right: 24px;
+      font-size: 15px;
+
+    }
+
+  }
+
+  @media #{$lg-max} {
+
+
+  }
+
+
+}

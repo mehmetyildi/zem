@@ -1,0 +1,77 @@
+/*Parallax */
+section.module:last-child {
+    margin-bottom: 0;
+}
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+section.module p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 200;
+}
+section.module p:last-child {
+    margin-bottom: 0;
+}
+section.module.content {
+    padding: 40px 0;
+}
+section.module.parallax {
+    height: 450px;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    @include xxl{
+        background-attachment: fixed;
+        background-size: 100% auto;
+    }
+    @include lg{
+        background-attachment: fixed;
+    }
+    @include md{
+        background-attachment: fixed;
+    }
+    @include sm{
+        background-attachment: fixed;
+        height: 300px;
+    }
+    @include xs{
+        background-position: 50% 50%;
+        background-size: cover;
+        height:250px;
+    }
+}
+
+section.module.parallax-references {
+    background-image: url("../img/banners/referanslar_banner.jpg");
+}
+section.module.parallax-contact {
+    background-image: url("../img/banners/iletisim_banner.jpg");
+}
+section.module.parallax-projects {
+    background-image: url("../img/banners/projeler_banner.jpg");
+}
+section.module.parallax-blog {
+    background-image: url("../img/banners/projeler_banner.jpg");
+}
+section.module.parallax-about{
+    background-image: url("../img/hakkimizda_banner.jpg");
+}
+section.module.parallax-hr{
+    background-image: url("../img/banners/ik_banner2.jpg");
+}
+section.module.parallax-zmf{
+    background-image: url("../img/banners/zmf_farki_banner.jpg");
+}
+section.module.parallax-offer{
+    background-image: url("../img/banners/teklif_banner.jpg");
+}
+section.module.parallax-products{
+    background-image: url("../img/banners/urunler_banner.jpg");
+}
+section.module.parallax-products-alt{
+    background-image: url("../img/raf_sistemleri_banner_alt.png");
+}
+section.module.parallax-test{
+    background-image: url("../img/banner_test.jpg");
+}

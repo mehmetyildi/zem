@@ -1,0 +1,439 @@
+.homeOpening{
+    margin-top: 40px;
+    @include xs{
+        margin-top: 0;
+        padding-top: 50px !important;
+    }
+}
+
+.blueActionButton{
+    color:$white;
+    background: #263272;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    font-size: 18px;
+    padding: 12px 50px;
+    @include transition(all, 0.10s, ease-in-out);
+    @include sm{
+        margin-bottom: 30px;
+        display: block;
+    }
+    @include md{
+        margin-bottom: 30px;
+        display: block;
+    }
+    @include xs{
+        font-size:14px;
+        padding: 10px;
+        display: block;
+    }
+    &:hover{
+        color: $white;
+        padding: 15px 55px;
+        @include xs{
+            padding: 10px;
+        }
+    }
+}
+
+.yellowActionButton{
+    color:$white;
+    background: #F49C00;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    font-size: 18px;
+    padding: 12px 50px;
+    @include transition(all, 0.10s, ease-in-out);
+    @include sm{
+        margin-bottom: 30px;
+        display: block;
+    }
+    @include md{
+        margin-bottom: 30px;
+        display: block;
+    }
+    @include xs{
+        font-size:14px;
+        padding: 10px;
+        display: block;
+    }
+    &:hover{
+        color: $white;
+        padding: 15px 55px;
+        @include xs{
+            padding: 10px;
+        }
+    }
+}
+
+.absoluteSliderButtons{
+    z-index: 99999999;
+    position: absolute;
+    top: -60px;
+    left:0;
+    right:0;
+    @include md{
+        position: static;
+        margin-bottom: 60px;
+        left: 10px;
+        right: 10px;
+    }
+    @include sm{
+        position: static;
+        margin-bottom: 60px;
+        left: 10px;
+        right: 10px;
+    }
+    @include xs{
+        position: static;
+        margin-bottom: 60px;
+        left: 10px;
+        right: 10px;
+        overflow-x: hidden;
+    }
+}
+.homeFeatures{
+    margin-top: 60px;
+}
+.singleHomeFeature{
+    border: 1px solid #1EB9DE;
+
+    color:#333;
+    padding: 0px 15px 0px 105px;
+    font-size: 16px;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 90px;
+    height: 90px;
+    display: table-cell;
+    vertical-align: middle;
+    @include transition(all, 0.30s, ease-in-out);
+    &:hover{
+      color:#333;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    }
+    @include xs{
+        width: 100%;
+    }
+}
+.singleHomeFeature#feature1{
+    background-image: url('../img/feature1.png');
+}
+.singleHomeFeature#feature2{
+    background-image: url('../img/feature2.png');
+}
+.singleHomeFeature#feature3{
+    background-image: url('../img/feature3.png');
+}
+.singleHomeFeature#feature4{
+    background-image: url('../img/feature4.png');
+}
+
+.parallaxMiddle{
+    background-image: url('../img/nasil_fark_yaratiyoruz.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include lg{
+        background-attachment: fixed;
+    }
+    @include md{
+        background-attachment: fixed;
+    }
+    @include sm{
+        background-attachment: fixed;
+    }
+    @include xs{
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    padding: 80px 0;
+    .parallaxMessage{
+        background-color: rgba($white, 0.8);
+        padding: 40px;
+        h2{
+            font-size: 36px;
+            color: #263272;
+            margin-bottom: 30px;
+        }
+        h3{
+            font-size: 24px;
+            color: #263272;
+            margin-bottom: 30px;
+        }
+        p{
+            font-weight: 300;
+        }
+    }
+}
+.homeTestimonialSlider{
+    border-left: 1px solid #979797;
+    @include sm{
+        border: none;
+    }
+    @include xs{
+        border: none;
+    }
+    .item{
+        padding: 0 60px 0 60px;
+        .quote{
+            position: relative;
+            font-size: 13px;
+            padding: 10px 10px 0 10px;
+            margin-bottom: 0;
+            margin-right: 10px;
+            display: inline-block;
+            &:before{
+                content: "“";
+                font-size: 30px;
+                @include opensans();
+                position: absolute;
+                top: -5px;
+                left: -5px;
+            }
+            &:after{
+                content: "“";
+                font-size: 30px;
+                @include opensans();
+                position: absolute;
+                bottom: -20px;
+                right: 20px;
+            }
+        }
+        .col-11{
+            .quote{
+                padding: 15px;
+            }
+        }
+    }
+    img{
+        width: 100px !important;
+        @include xs{
+            width: 60px !important;
+        }
+        padding: 0 5px 5px 0;
+        background: url('../img/green-bg.png') no-repeat right -5px bottom -5px;
+    }
+}
+
+.owl-carousel .owl-nav .owl-prev{
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 22px);
+    @include xs{
+        left: -16px;
+    }
+    width: 22px;
+    height: 41px;
+    background: url('../img/arrow-left.png') no-repeat center center;
+}
+
+.owl-carousel .owl-nav .owl-next{
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 22px);
+    width: 22px;
+    height: 41px;
+    @include xs{
+        right: -16px;
+    }
+    background: url('../img/arrow-right.png') no-repeat center center;
+}
+
+.homeProjectCard{
+    background: #1EB9DE;
+    padding: 15px;
+    background: rgba(#1EB9DE,0.05);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05), inset 0 1px 3px 0 rgba(0,0,0,0.05);
+    .imgWithBackground{
+        background-size: 55%;
+        padding: 5px;
+    }
+    .homeProjectImage{
+        .projectIcon{
+            width: 50px;
+            height: 50px;
+            background: url('../img/project-icon1.png') no-repeat center center;
+            position: absolute;
+            top: 7px;
+            left: 7px;
+        }
+        .projectIconAlt{
+            width: 50px;
+            height: 50px;
+            background: url('../img/project-icon2.png') no-repeat center center;
+            position: absolute;
+            top: 7px;
+            left: 7px;
+        }
+    }
+    h3{
+        color: #263272;
+        font-size:18px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-weight: 300;
+    }
+}
+
+.parallaxAskOffer{
+    background-image: url('../img/ask-offer-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include lg{
+        background-attachment: fixed;
+    }
+    @include md{
+        background-attachment: fixed;
+    }
+    @include sm{
+        background-attachment: fixed;
+    }
+    @include xs{
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    color: $white;
+    .borderRight{
+        border-right: 1px solid $white;
+        text-align: right;
+        @include sm{
+            border: none;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @include xs{
+            border: none;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+    padding: 80px 0;
+    .parallaxMessage{
+        h2{
+            font-size: 36px;
+            color: $white;
+            background: url('../img/heading-logo-white.png') no-repeat left center;
+            padding-left: 30px;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        h4{
+            color: $white;
+            font-weight: 300;
+            font-size: 20px;
+            a{
+                color: $white;
+            }
+            span{
+                font-size: 36px;
+                display: inline-block;
+                margin: 0 15px;
+            }
+        }
+        p{
+            font-weight: 300;
+        }
+    }
+    .parallaxOfferForm{
+        background: rgba(#D8D8D8, 0.37);
+        padding: 15px;
+        button{
+            color: $white;
+            display: inline-block;
+            background-image: url('../img/nav-white.png');
+            background-position: left center;
+            background-repeat: no-repeat;
+            border:none;
+            background-color: transparent;
+            outline: 0;
+            box-shadow: none;
+            padding-left: 15px;
+            font-weight: 400;
+            padding-top: 4px;
+            font-size: 20px;
+            margin-top: 5px;
+            @include transition(all, 0.30s, ease-in-out);
+            &:hover{
+                background-position: right center;
+                padding-left: 0;
+                padding-right: 15px;
+                color: $white;
+            }
+        }
+        input{
+            background: transparent;
+            border: none;
+            box-shadow:none;
+            outline: 0;
+            border-bottom: 1px solid #979797;
+            padding: 4px 10px;
+            margin-bottom: 10px;
+        }::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+             color: $white;
+             line-height: 15px;
+             padding-top:3px;
+         }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $white;
+            line-height: 15px;
+            padding-top:3px;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: $white;
+            line-height: 15px;
+            padding-top:3px;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: $white;
+            line-height: 15px;
+            padding-top:3px;
+        }
+    }
+}
+
+.homeBlogCard{
+    padding-left: 10px;
+    background-image: url('../img/blue-stick.png');
+    background-repeat: repeat-y;
+    background-position: left center;
+    padding-bottom: 20px;
+    padding-top: 6px;
+
+    .blogCardContent{
+        margin-top: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+        background: #fff;
+        h3{
+            font-size: 18px;
+            color: #263272;
+            letter-spacing: 0.6px;
+            line-height: 22px;
+        }
+    }
+}
+
+.referencesIntro{
+    .linkWithLeftBorder{
+        display: inline-block;
+        margin-left: 15px;
+    }
+}
+
+.tp-caption.tp-resizeme.tp2.hiddenXs{
+    @include xs{
+        display: none !important;
+    }
+}
+
+.tp-caption.tp-resizeme.tp2.rePosition{
+    @include xs{
+        top: auto !important;
+        bottom: -186px !important;
+        h1{
+            font-size: 20px !important;
+        }
+
+    }
+}

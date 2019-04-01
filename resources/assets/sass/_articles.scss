@@ -1,0 +1,32 @@
+.blogHeading{
+    .headingWithLogo{
+        margin: 0 auto;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+}
+
+.imgWithBorder{
+    background-image: url('../img/blue-stick.png');
+    background-repeat: repeat-y;
+    background-position: left center;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 6px;
+    width: 50%;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    @include sm{
+        float:none;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    @include xs{
+        float:none;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

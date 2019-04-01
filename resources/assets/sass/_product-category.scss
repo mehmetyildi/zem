@@ -1,0 +1,132 @@
+@import 'variables';
+
+.shorten-news{
+  font-family: GTWalsheimPro-Light;
+  font-size: 30px;
+  color: #E04403;
+}
+
+.product-category .container{
+  background-color: #EBEBEB;
+}
+h1{
+  font-family: GTWalsheimPro-Medium;
+  font-size: 30px;
+  color: #FFFFFF;
+  letter-spacing: 0.12px;
+}
+
+h3{
+  font-family: GTWalsheimPro-Medium;
+  font-size: 30px;
+  color: #003DA6;
+  letter-spacing: 0.12px;
+}
+
+.products .row .bg-white .row ul {
+
+  list-style-type: none;
+
+  h2{
+    font-family: GTWalsheimPro-Medium;
+    font-size: 30px;
+    color: #E04403;
+    letter-spacing: 0.12px;
+  }
+
+  li {
+    font-family: GTWalsheimPro-Regular;
+    font-size: 18px;
+    color: #2D2D2D;
+    letter-spacing: 0.29px;
+    line-height: 21px;
+    padding: 14px 0px;
+
+    a{
+      text-decoration: none;
+      color:#2D2D2D;
+      &:hover{
+        transition: .2s;
+        color: #E04403;
+        .svg #Oval, #Path-7{
+          transition: .2s;
+          stroke: #E04403;
+        }
+      }
+    }
+  }
+
+}
+
+.other-projects
+{
+  .project-card{
+    background-color:#EDEDED;
+    border: 1px solid #003BA2;
+    display: inline-block;
+    height: 363px;
+
+    -webkit-transition: 1s time;
+    -moz-transition: 1s time;
+    -ms-transition: 1s time;
+    -o-transition: 1s time;
+    transition: 1s time;
+    &:hover{
+      -webkit-transition: 1s time;
+      -moz-transition: 1s time;
+      -ms-transition: 1s time;
+      -o-transition: 1s time;
+      transition: 1s time;
+      background: #003BA2;
+      .svg #Oval, #Path-7{
+        stroke: white;
+      }
+
+      p.item-no{
+        color: white;
+      }
+      p.item-no:before{
+        border-color:white
+      }
+      .shorten-news{
+        color: white;
+      }
+      #see-more-btn{
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    p.item-no {
+      font-family: GTWalsheimPro-Light;
+      font-size: 16px;
+      color: #E04403;
+      letter-spacing: 0.26px;
+      text-align: center;
+      display: table;
+      white-space: nowrap;
+      padding-top: 30px;
+      margin-bottom: 0;
+
+      &:before {
+        border-top: 1px solid #E04403;
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 0.5em;
+        width: 85%;
+      }
+
+      &:before { right: 1.5%; }
+    }
+  }
+}
+
+#see-more-btn{
+  text-decoration: none;
+  font-family: GTWalsheimPro-light;
+  font-size: 18px;
+  color: #E04403;
+  float: right;
+}
+

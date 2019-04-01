@@ -1,0 +1,118 @@
+.product-properties .row .bg-white .row ul {
+
+  list-style-type: none;
+
+
+  h2{
+    font-family: GTWalsheimPro-Medium;
+    font-size: 30px;
+    color: #E04403;
+    letter-spacing: 0.12px;
+  }
+
+  li {
+    font-family: GTWalsheimPro-Light;
+    font-size: 18px;
+    color: #2D2D2D;
+    line-height: 33px;
+
+    &:before{
+      content:"\025cb";
+      color: #E04403;
+      font-size: 1em;
+      padding-right: 1.1225em;
+      position: relative;
+      top: 0em;
+    }
+
+    }
+  }
+
+.offer-btn{
+  top: 20px;
+  background-color: #E04403;
+  line-height: 55px;
+  text-align: right;
+  a{
+    font-family: GTWalsheimPro-Light;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+.gallery-cover-style{
+
+  .tint {
+    position: relative;
+    cursor: pointer;
+
+  }
+
+  .tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,102,0, 0.6);
+    transition: all .3s linear;
+  }
+
+
+
+  &:hover{
+    .tint:hover:before {
+      background: none;
+    }
+    .gallery-icon-position{
+      display: none;
+    }
+  }
+}
+
+.gallery-icon-position {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  font-family: GTWalsheimPro-Light;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 0.26px;
+}
+
+
+
+.product .container{
+  background-color: #ebebeb;
+}
+
+@media #{$lg-max} {
+
+
+}
+
+
+@media #{$md-max} {
+
+.offer-btn a{
+  font-size: 20px;
+}
+}
+
+
+@media #{$sm-max} {
+
+
+}
+
+@media #{$xs-max} {
+
+
+}
+
+

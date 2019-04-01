@@ -1,0 +1,132 @@
+.darkBlueList{
+     list-style-type: none;
+     li{
+         display: block;
+         margin-bottom: 10px;
+         padding-left: 20px;
+         background: url('../img/dark-blue-square.png') no-repeat left top 6px;
+     }
+}
+.productList{
+    list-style-type: none;
+    li, span{
+        display: inline-block;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        background: url('../img/products/plus.png') no-repeat left top 4px;
+        a{
+            color: #333;
+        }
+    }
+}
+.advantageList{
+    list-style-type: none;
+    li{
+        display: block;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        background: url('../img/products/check.png') no-repeat left top 2px;
+        a{
+            color: #333;
+        }
+    }
+}
+.categoryCard{
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 1.47px;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05), inset 0 1px 3px 0 rgba(0,0,0,0.05);
+    .caption{
+        color: #fff;
+        font-size: 24px;
+        @include xs{
+            font-size: 14px;
+        }
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        text-transform: uppercase;
+        padding: 10px 70px 10px 10px;
+        background: url('../img/products/ribbon3.png') no-repeat right -80px center;
+
+    }
+}
+
+.quickOfferCard{
+    background-image: url('../img/projects/video-bg-left.png'), url('../img/projects/video-bg-right.png');
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    padding: 10px;
+    .innerCard{
+        background-color: #FFFFFF;
+
+        border: 1px solid #CACACA;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+        padding: 15px;
+        h3{
+            @include opensans();
+            font-weight:300;
+            font-size: 24px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .checkboxWrapper{
+            font-size: 12px;
+        }
+        .submitBtn{
+            background-image: url('../img/nav-orange.png');
+        }
+    }
+}
+
+.definitionCard{
+    background-image: url('../img/top-left-bg.png'), url('../img/bottom-right-bg.png');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding: 10px;
+    .definitionInner{
+        background-color: #FFFFFF;
+
+        border: 1px solid #CACACA;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+        padding: 30px;
+        h3{
+            @include opensans();
+            font-weight:300;
+            font-size: 24px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .checkboxWrapper{
+            font-size: 12px;
+        }
+        .submitBtn{
+            background-image: url('../img/nav-orange.png');
+        }
+    }
+}
+
+.definitionList{
+    list-style-type: none;
+    li{
+        margin-bottom: 5px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+
+.justImageList{
+    a{
+        color: $body;
+
+    }
+}
+
+.fancybox-caption-wrap{
+    text-align: center;
+}

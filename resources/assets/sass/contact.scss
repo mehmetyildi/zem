@@ -1,0 +1,92 @@
+.contactElement{
+    .contactElementName{
+        display: inline-block;
+        color: #263272;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .contactElementDescription{
+        line-height: 24px;
+    }
+    a{
+        color: #333;
+    }
+    margin-bottom: 20px;
+}
+
+#googleMaps{
+    height: 300px;
+    width:100%;
+}
+.googleMapsContainer{
+    padding: 15px;
+    background-image: url('../img/top-left-bg.png'), url('../img/bottom-right-bg.png');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.teamCard{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05), inset 0 1px 3px 0 rgba(0,0,0,0.05);
+    padding: 0 20px 20px 20px;
+    min-height: 365px;
+    img{
+        border-bottom: 4px solid #1EB9DE;
+    }
+    .memberName{
+        min-height: 180px;
+        margin-bottom: 10px;
+        padding: 50px 0;
+        h2{
+            font-size: 16px;
+            color: #212121;
+            letter-spacing: 2.31px;
+        }
+        h3{
+            font-size: 14px;
+            font-weight:200;
+            color: #263272;
+            letter-spacing: 2.31px;
+            line-height: 22px;
+        }
+    }
+    .memberContacts{
+        min-height:95px;
+        .memberLine{
+            margin-bottom: 5px;
+            font-size: 13px;
+            i{
+                color: #263272;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            a{
+                color: #333;
+                font-size: 13px;
+            }
+        }
+    }
+    .shortLinks{
+        margin-top: 30px;
+        a{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .linkedin{
+            width:22px;
+            height:22px;
+            background: url('../img/team/linkedin.png') no-repeat center center;
+        }
+        .whatsapp{
+            width:21px;
+            height:21px;
+            background: url('../img/team/whatsapp.png') no-repeat center center;
+        }
+        .vcf{
+            float: right;
+            width:20px;
+            height:22px;
+            background: url('../img/team/vcf.png') no-repeat center center;
+        }
+    }
+}

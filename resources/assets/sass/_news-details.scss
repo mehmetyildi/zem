@@ -1,0 +1,32 @@
+@import 'variables';
+
+
+
+
+
+  .news-left-corner {
+    left: 15px;
+    border-left: 1px solid $red;
+  }
+
+  .news-right-corner {
+    right: 15px;
+    border-right: 1px solid $red;
+  }
+  .news-corner-border{
+    position: absolute;
+    width: 14px;
+    height: 70%;
+
+  }
+  .news-bottom-border{
+    bottom:15px;
+    border-bottom: 1px solid $red;
+  }
+  .news-left-border{
+    left: 0px;
+    border-left: 1px solid $red;
+  }
+
+
+
