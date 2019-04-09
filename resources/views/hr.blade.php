@@ -75,7 +75,7 @@
                             <div class="col-md-8 text-center">
                                 <h4 class="form-title text-center">
                                     IS STAJ BASVURU FORMU</h4>
-                                <form action="{{ route('mail.contact') }}" method="POST" id="career-form custom-border"
+                                <form action="" method="POST" id="career-form custom-border"
                                       class="offerForm disableOnSubmit">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="form_id"

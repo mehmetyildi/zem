@@ -1,24 +1,22 @@
 @import 'variables';
 
 
-
 header {
-  .line{
-    width:2px;
+  .line {
+    width: 2px;
     height: 100%;
     background-color: #E04403;
 
 
   }
 
-  .show{
+  .show {
     width: 100%;
     display: block;
   }
 
-  #dropdown-primary>#dropdown-menu-c>li>
-
-  .overflow-hidden>.side-menu-title{
+  #dropdown-primary > #dropdown-menu-c > li >
+  .overflow-hidden > .side-menu-title {
     transform: rotate(-90deg);
     font-family: GTWalsheimPro-Light;
     font-size: 20px;
@@ -27,68 +25,89 @@ header {
     text-align: right;
   }
 
-  #inner-menu #inner-menu-item{
+  .inner-menu .inner-menu-item {
     list-style-type: circle;
     font-family: GTWalsheimPro-Medium;
-    font-size: 18px;
+    font-size: 16px;
     color: #E04403;
     letter-spacing: 0.2px;
-    text-align: justify;
+
+
+    a {
+      color: $orange !important;
+      -webkit-transition: .7s;
+      -moz-transition: .7s;
+      -ms-transition: .7s;
+      -o-transition: .7s;
+      transition: .7s;
+
+      &:hover {
+        padding-left: 15px;
+        color: $orange !important;
+        -webkit-transition: .7s;
+        -moz-transition: .7s;
+        -ms-transition: .7s;
+        -o-transition: .7s;
+        transition: .7s;
+      }
+    }
   }
 
-  ul>li{
+  ul > li {
     font-family: 'GTWalsheimPro-Light';
     font-size: 34px;
     color: #003DA6;
     letter-spacing: 0.69px;
     line-height: 53px;
     list-style-type: none;
-    &:hover{
+
+    &:hover {
       color: #E04403;
     }
-   /* &::before {
-      position: absolute;
-      bottom: 3px;
-      right: 0;
-      content: '';
-      display: block;
-      width: 0;
-      height: 1px;
-      background: #003DA6;
-      transition: width .1s;
-    }
-*/
+
+    /* &::before {
+       position: absolute;
+       bottom: 3px;
+       right: 0;
+       content: '';
+       display: block;
+       width: 0;
+       height: 1px;
+       background: #003DA6;
+       transition: width .1s;
+     }
+ */
   }
 
-  #dropdown-primary>#dropdown-menu-c{
+  #dropdown-primary > #dropdown-menu-c {
     border: none;
   }
 
-  #inner-menu #inner-menu-item ul>li:hover::before {
+  .inner-menu .inner-menu-item ul > li:hover::before {
     width: 100%;
 
   }
 
-  #dropdown-primary .dropup, .dropright, .dropdown, .dropleft{
+  #dropdown-primary .dropup, .dropright, .dropdown, .dropleft {
     position: unset;
   }
 
   #navbar-primary .navbar-nav > li > a {
-        position: relative;
-        padding-left: 30px;
-        padding-right: 30px;
-        text-transform: capitalize;
-        font-family: 'GTWalsheimPro-Medium';
-        font-size: 18px;
-        color: #003DA6;
-        letter-spacing: 0.29px;
-        text-align: center;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: capitalize;
+    font-family: 'GTWalsheimPro-Medium';
+    font-size: 18px;
+    color: #003DA6;
+    letter-spacing: 0.29px;
+    text-align: center;
 
-        &:hover{
-          transition: .5s;
-          color:  #003DA6;
-          text-decoration: none;
-        }
+    &:hover {
+      transition: .5s;
+      color: #003DA6;
+      text-decoration: none;
+    }
 
   }
 
@@ -114,7 +133,7 @@ header {
 
   .dropdown-toggle::after {
     display: inline-block;
-   margin-left: 0;
+    margin-left: 0;
     vertical-align: 0;
     border-top: 0;
     border-right: 0;
@@ -123,6 +142,12 @@ header {
 
   }
 
+
+  .desktop-menu-categories {
+    &:hover {
+      color: $orange !important;
+    }
+  }
 
 
   @media #{$xs-max} {
@@ -144,6 +169,15 @@ header {
 
     }
 
+    .desktop-menu-categories li {
+      font-size: 16px;
+      text-align: center;
+
+      a {
+        color: $orange;
+      }
+    }
+
   }
 
   @media #{$lg-max} {
@@ -153,3 +187,32 @@ header {
 
 
 }
+
+.desktop-menu-categories {
+
+  .active {
+    a {
+      color: $orange;
+    }
+  }
+
+  a {
+    color: $blue;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+
+    &:hover {
+      color: $orange;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+    }
+  }
+
+}
+

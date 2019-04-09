@@ -131,6 +131,11 @@
                 </li>
             @endcan
             @can('edit_content')
+                <li class="{{ (strpos($currentRouteName, 'blog-post') !== false) ? 'active' : '' }}">
+                    <a href="{{ route('cms.blog-posts.index') }}"><i class="fa fa-globe"></i> <span class="nav-label">Blog</span></a>
+                </li>
+            @endcan
+            @can('edit_content')
                 <li class="{{ (strpos($currentRouteName, 'popups') !== false) ? 'active' : '' }}">
                     <a href="{{ route('cms.popups.index') }}"><i class="fa fa-bullhorn"></i> <span class="nav-label">Popup Duyuruları </span></a>
                 </li>

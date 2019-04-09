@@ -56,7 +56,7 @@
                             </p>
                             <a id="form-toggler" onclick="return false" href="return false" class="text-white btn-on">
                                 <div class="d-flex align-items-center "><img src={{asset('img/right-arrow.svg')}} alt=""
-                                                                             ><span class="pl-3 py-3 form-btn">İletişim Formu</span>
+                                    ><span class="pl-3 py-3 form-btn">İletişim Formu</span>
                                 </div>
                             </a>
                         </div>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-md-7 bg-white p-4 form-container">
 
-                            <form action="{{ route('mail.contact') }}" method="POST" id="career-form custom-border"
+                            <form action="" method="POST" id="career-form custom-border"
                                   class="offerForm disableOnSubmit">
                                 {{ csrf_field() }}
                                 <input type="hidden" name="form_id"
@@ -145,40 +145,54 @@
         <section>
             <div class="container">
                 <div class="row justify-content-around">
-                    <div class="col-md-10">
+                    <div class="col-md-10 py-5">
                         <h1>Pazarlama Ekibimizle İletişim Kurun</h1>
                     </div>
-                    <div class="col-md-10 text-left">
+                    <div class="col-md-10 text-left pb-5">
                         <div class="row justify-content-between">
-                            <div class="col-md-3 contact-card">
-                                <h3>Uğur Yılmazer</h3>
-                                <h4>Satış Mühendisi</h4>
-                                <img src="{{asset('img/contact_holder.png')}}" alt="Contact Img" class="w-100">
-                                <div class="text-right w-100">
-                                    <span><img src="{{asset("img/mail-icon.svg")}}" alt="">&nbsp;test@gmail.com</span><br>
-                                    <span><i class="fa fa-linkedin"></i>&nbsp;John Doe</span>
-                                </div>
-                            </div>
+                            @foreach($employees as $employee)
+                                <div class="col-md-3 contact-card">
+                                    <h3>{{$employee->name}}</h3>
+                                    <h4>{{$employee-> {'job_title_'.$l} }}</h4>
+                                    <img src="{{ asset('storage/'.$employee->main_image) }}" class="w-100" alt="{{ $employee->name }}" title="{{ $employee->name }}" >
+                                    <div class="text-left w-100 pt-3">
+                                        @if($employee->email)
 
-                            <div class="col-md-3 contact-card">
-                                <h3>Uğur Yılmazer</h3>
-                                <h4>Satış Mühendisi</h4>
-                                <img src="{{asset('img/contact_holder2.jpg')}}" alt="Contact Img" class="w-100">
-                                <div class="text-right w-100">
-                                    <span><img src="{{asset("img/mail-icon.svg")}}" alt="">&nbsp;test@gmail.com</span><br>
-                                    <span><i class="fa fa-linkedin"></i>&nbsp;John Doe</span>
-                                </div>
-                            </div>
+                                        @if($employee->desk_phone)
+                                            <div class="memberLine">
+                                                <i class="fa fa-phone"></i> <a href="tel:{{ $employee->desk_phone }}">{{ $employee->desk_phone }} ({{ $employee->desk_extension }})</a>
+                                            </div>
+                                        @endif
+                                        @if($employee->mobile_phone)
+                                            <div class="memberLine">
+                                                <i class="fa fa-phone"></i> <a href="tel:{{ $employee->mobile_phone }}">{{ $employee->mobile_phone }}</a>
+                                            </div>
+                                        @endif
+                                        @if($employee->pbx)
+                                            <div class="memberLine">
+                                                <i class="fa fa-print"></i> <a href="tel:{{ $employee->pbx }}">{{ $employee->pbx }}</a>
+                                            </div>
+                                        @endif
+                                            <div class="memberLine">
+                                                <img src="{{asset("img/mail-icon.svg")}}" alt="{{ $employee->email }}"> <a href="mailto:{{ $employee->email }}">{{ $employee->email }}</a>
+                                            </div>
+                                        @endif
+                                            @if($employee->whatsapp)
+                                                <a href="https://api.whatsapp.com/send?phone={{ $employee->whatsapp }}" target="_blank" class="whatsapp whatsappBtn"></a>
+                                            @endif
+                                            @if($employee->linkedin)
+                                                <a target="blank" href="{{ $employee->linkedin }}" class="linkedin"></a>
+                                            @endif
+                                            @if($employee->vcf)
+                                                <a target="_blank" href="{{ asset('storage/'.$employee->vcf) }}" class="vcf"></a>
+                                            @endif
 
-                            <div class="col-md-3 contact-card">
-                                <h3>Uğur Yılmazer</h3>
-                                <h4>Satış Mühendisi</h4>
-                                <img src="{{asset('img/contact-holder3.png')}}" alt="Contact Img" class="w-100">
-                                <div class="text-right w-100">
-                                    <span><img src="{{asset("img/mail-icon.svg")}}" alt="">&nbsp;test@gmail.com</span><br>
-                                    <span><i class="fa fa-linkedin"></i>&nbsp;satis@lınkedin.com</span>
+
+
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
+
                         </div>
                     </div>
 

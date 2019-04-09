@@ -19,12 +19,42 @@ Route::group(
         Route::name('home')->get('/', 'HomeController@home');
         Route::name('corporate')->get('/about-us', 'HomeController@about_us');
         Route::name('hr')->get('/human-resources', 'HomeController@hr');
-        Route::name('blog')->get('/blog', 'HomeController@blog');
-
         Route::name('product-categories')->get('/product-categories', 'HomeController@product_categories');
-        Route::name('product-detail')->get('/product-detail', 'HomeController@product_detail');
-        Route::name('news')->get('/news', 'HomeController@news');
-        Route::name('news-detail')->get('/news-detail/{url}', 'HomeController@news_detail');
+
+        if(app()->getLocale() == 'tr'){
+            Route::name('projects.index')->get('/projeler', 'ProjectsController@index');
+            Route::name('projects.detail')->get('/projeler/{url}', 'ProjectsController@detail');
+        }else{
+            Route::name('projects.index')->get('/projects', 'ProjectsController@index');
+            Route::name('projects.detail')->get('/projects/{url}', 'ProjectsController@detail');
+        }
+        if(app()->getLocale() == 'tr'){
+            Route::name('products.index')->get('/urunler', 'ProductsController@index');
+            Route::name('products.category')->get('/urunler/{category}', 'ProductsController@category');
+            Route::name('products.detail')->get('/urunler/{category}/{url}', 'ProductsController@detail');
+        }else{
+
+            Route::name('products.index')->get('/products', 'ProductsController@index');
+            Route::name('products.category')->get('/products/{category}', 'ProductsController@category');
+            Route::name('products.detail')->get('/products/{category}/{url}', 'ProductsController@detail');
+        }
+        Route::name('references')->get('/references', 'HomeController@references');
+        if(app()->getLocale() == 'tr'){
+            Route::name('articles.index')->get('/news', 'ArticlesController@index');
+            Route::name('articles.detail')->get('/news/{url}', 'ArticlesController@detail');
+        }else{
+            Route::name('articles.index')->get('/news', 'ArticlesController@index');
+            Route::name('articles.detail')->get('/news/{url}', 'ArticlesController@detail');
+        }
+
+        if(app()->getLocale() == 'tr'){
+            Route::name('blog.index')->get('/blog', 'BlogController@index');
+            Route::name('blog.detail')->get('/blog/{url}', 'BlogController@detail');
+        }else{
+            Route::name('blog.index')->get('/blog', 'BlogController@index');
+            Route::name('blog.detail')->get('/blog/{url}', 'BlogController@detail');
+        }
+
         Route::name('projects')->get('/projects', 'HomeController@projects');
         Route::name('project-detail')->get('/project-detail', 'HomeController@project_detail');
         Route::name('contact')->get('contact', 'HomeController@contact');
@@ -314,6 +344,26 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
             Route::name('delete')->delete('/{record}', 'ArticlesController@delete');
             Route::name('delete-file')->delete('/{record}/delete-file', 'ArticlesController@deleteFile');
             Route::name('toggle-promotion')->post('/toggle-promotion', 'ArticlesController@togglePromotion');
+
+            Route::name('gallery')->get('/{record}/gallery', 'GalleryController@index');
+            Route::name('gallery.edit')->get('/gallery/{record}/edit', 'GalleryController@edit');
+            Route::name('gallery.update')->put('/gallery/{record}', 'GalleryController@update');
+            Route::name('gallery.store')->post('/gallery', 'GalleryController@store');
+            Route::name('gallery.delete')->delete('/gallery/{record}/delete', 'GalleryController@delete');
+            Route::name('gallery.sort-records')->post('/gallery/sort-records', 'GalleryController@sortRecords');
+        });
+
+        Route::prefix('blog-posts')->as('blog-posts.')->namespace('BlogPosts')->group(function(){
+            Route::name('index')->get('/', 'BlogPostsController@index');
+            Route::name('store')->post('/', 'BlogPostsController@store');
+            Route::name('create')->get('/create', 'BlogPostsController@create');
+            Route::name('sort')->get('/sort', 'BlogPostsController@sort');
+            Route::name('sort-records')->post('/sort-records', 'BlogPostsController@sortRecords');
+            Route::name('edit')->get('/{record}/edit', 'BlogPostsController@edit');
+            Route::name('update')->put('/{record}', 'BlogPostsController@update');
+            Route::name('delete')->delete('/{record}', 'BlogPostsController@delete');
+            Route::name('delete-file')->delete('/{record}/delete-file', 'BlogPosts@deleteFile');
+            Route::name('toggle-promotion')->post('/toggle-promotion', 'BlogPosts@togglePromotion');
 
             Route::name('gallery')->get('/{record}/gallery', 'GalleryController@index');
             Route::name('gallery.edit')->get('/gallery/{record}/edit', 'GalleryController@edit');

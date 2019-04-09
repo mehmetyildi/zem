@@ -64,7 +64,7 @@ class HomerController extends Controller
             ->where('publish', true)
             ->orderBy('position', 'ASC')
             ->first();
-        return view('home', compact('slides', 'categories', 'projects', 'articles', 'references', 'thePopup'));
+        return view('home', compact('', 'categories', 'projects', 'articles', 'references', 'thePopup'));
     }
 
     /**

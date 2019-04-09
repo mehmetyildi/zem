@@ -9769,7 +9769,7 @@ section.module.parallax-test {
 }
 
 .text-orange {
-  color: #f6993f;
+  color: #E04403 !important;
 }
 
 .bg-grey {
@@ -9798,13 +9798,25 @@ header #dropdown-primary > #dropdown-menu-c > li >
   text-align: right;
 }
 
-header #inner-menu #inner-menu-item {
+header .inner-menu .inner-menu-item {
   list-style-type: circle;
   font-family: GTWalsheimPro-Medium;
-  font-size: 18px;
+  font-size: 16px;
   color: #E04403;
   letter-spacing: 0.2px;
-  text-align: justify;
+}
+
+header .inner-menu .inner-menu-item a {
+  color: #E04403 !important;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+header .inner-menu .inner-menu-item a:hover {
+  padding-left: 15px;
+  color: #E04403 !important;
+  -webkit-transition: .7s;
+  transition: .7s;
 }
 
 header ul > li {
@@ -9815,17 +9827,17 @@ header ul > li {
   line-height: 53px;
   list-style-type: none;
   /* &::before {
-      position: absolute;
-      bottom: 3px;
-      right: 0;
-      content: '';
-      display: block;
-      width: 0;
-      height: 1px;
-      background: #003DA6;
-      transition: width .1s;
-    }
-*/
+       position: absolute;
+       bottom: 3px;
+       right: 0;
+       content: '';
+       display: block;
+       width: 0;
+       height: 1px;
+       background: #003DA6;
+       transition: width .1s;
+     }
+ */
 }
 
 header ul > li:hover {
@@ -9836,7 +9848,7 @@ header #dropdown-primary > #dropdown-menu-c {
   border: none;
 }
 
-header #inner-menu #inner-menu-item ul > li:hover::before {
+header .inner-menu .inner-menu-item ul > li:hover::before {
   width: 100%;
 }
 
@@ -9892,12 +9904,39 @@ header .dropdown-toggle::after {
   border-left: 0;
 }
 
+header .desktop-menu-categories:hover {
+  color: #E04403 !important;
+}
+
 @media only screen and (max-width: 992px) {
   header #navbar-primary .navbar-nav > li > a {
     padding-left: 24px;
     padding-right: 24px;
     font-size: 15px;
   }
+  header .desktop-menu-categories li {
+    font-size: 16px;
+    text-align: center;
+  }
+  header .desktop-menu-categories li a {
+    color: #E04403;
+  }
+}
+
+.desktop-menu-categories .active a {
+  color: #E04403;
+}
+
+.desktop-menu-categories a {
+  color: #003BA2;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.desktop-menu-categories a:hover {
+  color: #E04403;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .text-blue {
@@ -9905,7 +9944,7 @@ header .dropdown-toggle::after {
 }
 
 .text-orange {
-  color: #f6993f;
+  color: #E04403 !important;
 }
 
 .bg-grey {
@@ -10776,7 +10815,7 @@ footer .input-group-text, footer .form-control {
 }
 
 .text-orange {
-  color: #f6993f;
+  color: #E04403 !important;
 }
 
 .bg-grey {

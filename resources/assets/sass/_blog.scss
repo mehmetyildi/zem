@@ -72,13 +72,15 @@ p.menuTag {
     white-space: nowrap;
     margin-bottom: 0;
 
+
     &:before {
       border-top: 1px solid #E04403;
       content: '';
       display: table-cell;
       position: relative;
-      top: 0.5em;
-      width: 85%;
+      top: 0.6em;
+      width: 35%;
+
     }
 
   }

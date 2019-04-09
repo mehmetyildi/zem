@@ -30,20 +30,22 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function category($category)
-    {
-        $theCategory = Category::where('url_'. app()->getLocale(), $category)->first();
-        $projects = Project::where('publish_until', '>=', todayWithFormat('Y-m-d'))
-            ->where('publish', true)
-            ->where('category_id', $theCategory->id)
-            ->orWhere('publish_until', null)
-            ->where('publish_at', '<=', todayWithFormat('Y-m-d'))
-            ->where('publish', true)
-            ->where('category_id', $theCategory->id)
-            ->orderBy('position', 'ASC')
-            ->take(3)
-            ->get();
-        return view('products.category', compact('theCategory','projects'));
-    }
+            {
+                $theCategory = Category::where('url_'. app()->getLocale(), $category)->first();
+
+                $products = Product::where('publish_until', '>=', todayWithFormat('Y-m-d'))
+                    ->where('publish', true)
+                    ->where('category_id', $theCategory->id)
+                    ->orWhere('publish_until', null)
+                    ->where('publish_at', '<=', todayWithFormat('Y-m-d'))
+                    ->where('publish', true)
+                    ->where('category_id', $theCategory->id)
+                    ->orderBy('position', 'ASC')
+                    ->take(3)
+                    ->get();
+
+                return view('products.category', compact('theCategory','products'));
+            }
 
     /**
      * Show the article detail page.
@@ -54,7 +56,8 @@ class ProductsController extends Controller
     {
         $theCategory = Category::where('url_'. app()->getLocale(), $category)->first();
         $theProduct = Product::where('url_'. app()->getLocale(), $url)->first();
-        $projects = Project::where('publish_until', '>=', todayWithFormat('Y-m-d'))
+
+        /*$projects = Project::where('publish_until', '>=', todayWithFormat('Y-m-d'))
             ->where('publish', true)
             ->where('category_id', $theCategory->id)
             ->orWhere('publish_until', null)
@@ -64,7 +67,8 @@ class ProductsController extends Controller
             ->orderBy('position', 'ASC')
             ->take(3)
             ->get();
-        return view('products.detail', compact('theCategory', 'theProduct', 'projects'));
+    */
+        return view('products.detail', compact('theCategory','theProduct'));
     }
 
 }

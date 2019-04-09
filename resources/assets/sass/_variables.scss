@@ -11,13 +11,14 @@ $line-height-base: 1.6;
 // Colors
 $blue: #003BA2;
 $orange :#E04403;
+
 $light-grey:#ebebeb;
 $grey:#ededed;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66D9b;
 $red: #FF0000;
-$orange: #f6993f;
+
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
@@ -50,7 +51,11 @@ $lg-max: "only screen and (max-width:1200px)";
 }
 
 .text-orange{
-  color: $orange;
+  color: $orange !important;
+}
+
+.text-red{
+
 }
 
 .bg-grey{

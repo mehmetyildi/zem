@@ -29,7 +29,7 @@
 			</div>
 	        <div class="ibox float-e-margins">
 	            <div class="ibox-title">
-	                <h5><i class="fa fa-info-circle"></i> İçerik Bilgileri</h5>
+	                <h5><i class="fa fa-info§-circle"></i> İçerik Bilgileri</h5>
 					@include('cms.includes.form-partials.ibox-resize')
 	            </div>
 	            <div class="ibox-content">

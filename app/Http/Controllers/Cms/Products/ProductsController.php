@@ -58,7 +58,7 @@ class ProductsController extends BaseController
     {
         checkPermissionFor('create_content');
         $categories = Category::all();
-        return view('cms.'.$this->pageUrl.'.create', compact('tags', 'categories'));
+        return view('cms.'.$this->pageUrl.'.create', compact('categories'));
     }
 
     /**

@@ -74,7 +74,7 @@
                             </div>
                             <div class="col-md-5 py-5">
                                 <div class="banner-text">
-                                    <h1 class="mb-4">Sırt Sırta Depo Raf Sistemleri</h1>
+                                    <h1 class="mb-4"></h1>
 
                                     <p>Sırt Sırta depo raf sistemleri yaygınlık bakımından en çok kullanılan raf
                                         sistemleridir. Geniş kullanım alanına rağmen ekonomik ve alışılmış depo raf

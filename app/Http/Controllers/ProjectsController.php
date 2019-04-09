@@ -19,16 +19,20 @@ class ProjectsController extends Controller
      */
     public function index()
     {
+
         $types = ProjectType::all();
         $categories = Category::all();
         $sectors = Sector::all();
         $cities = City::all();
+
+
         $projects = Project::where('publish_until', '>=', todayWithFormat('Y-m-d'))
             ->where('publish', true)->orWhere('publish_until', null)
             ->where('publish_at', '<=', todayWithFormat('Y-m-d'))
             ->where('publish', true)
             ->orderBy('position', 'ASC')
             ->get();
+
 
         $references = Reference::where('promote', true)
             ->orderBy('position', 'ASC')
@@ -43,20 +47,25 @@ class ProjectsController extends Controller
      */
     public function detail($url)
     {
-        $theProject = Project::where('url_'. app()->getLocale(), $url)->firstOrFail();
-        $projects = Project::where('id', '!=', $theProject->id)
-            ->where('publish_until', '>=', todayWithFormat('Y-m-d'))
-            ->where('publish', true)
-            ->where('category_id', $theProject->category_id)
-            ->orWhere('publish_until', null)
-            ->where('id', '!=', $theProject->id)
-            ->where('publish_at', '<=', todayWithFormat('Y-m-d'))
-            ->where('publish', true)
-            ->where('category_id', $theProject->category_id)
-            ->orderBy('position', 'ASC')
-            ->take(3)
-            ->get();
-        return view('projects.detail', compact('theProject', 'projects'));
+        $theProject = Project::where('url_' . app()->getLocale(), $url)->firstOrFail();
+
+
+        //Category id not found in projects table
+        /*       $projects = Project::where('id', '!=', $theProject->id)
+                    ->where('publish_until', '>=', todayWithFormat('Y-m-d'))
+                    ->where('publish', true)
+                    ->where('category_id', $theProject->category_id)
+                    ->orWhere('publish_until', null)
+                    ->where('id', '!=', $theProject->id)
+                    ->where('publish_at', '<=', todayWithFormat('Y-m-d'))
+                    ->where('publish', true)
+                    ->where('category_id', $theProject->category_id)
+                    ->orderBy('position', 'ASC')
+                    ->take(3)
+                    ->get();
+        */
+
+        return view('projects.detail', compact('theProject'));
     }
 
 }

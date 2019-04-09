@@ -2,58 +2,129 @@
 
 @section('seo')
     <!-- TITLE -->
-    <title>{{ trans('local.blog') }}</title>
-    <meta property="og:title" content="{{ trans('local.blog') }}"/>
-    <meta name="keywords" content="">
+    <title>Zem Raf | About Us</title>
+    <meta property="og:title" content="Zem Raf | Bead Ring"/>
+    <meta name="keywords"
+          content=" bead ring,zem raf,zem raf products,dia machine products, about dia, tire sector,">
     <!-- DESCRIPTION -->
-    <meta name="description" content="{{ trans('local.generalSeoDesc') }}">
-    <meta property="og:description" content="{{ trans('local.generalSeoDesc') }}"/>
+    <meta name="description" content="">
+    <meta property="og:description" content=""/>
     <!-- IMAGE -->
-    <meta property="og:image" content="{{ asset('img/zmf-logo.png') }}"/>
+    <meta property="og:image" content="{{ asset('img/dia_logo.png') }}"/>
     <!-- URL -->
-    <meta property="og:url" content="{{ route('articles.index') }}"/>
-    <meta name="canonical" content="{{ route('articles.index') }}"/>
+    <meta property="og:url" content=""/>
+    <meta name="canonical" content=""/>
 @endsection
-@section ('styles')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
+@section('styles')
+    <style>
+        .svg {
+            margin-bottom: -11px;
+        }
+
+        .shorten-news{
+            height: 130px;
+            max-height: 130px;
+            overflow: hidden;
+        }
+    </style>
 @endsection
 
 @section('content')
-    <section class="module parallax parallax-blog relative"></section>
-    <div class="pageBreadcrumb">
-        <div class="container">
-            <ul>
-                <li><a href="{{ route('home') }}">{{ trans('local.homepage') }}</a></li>
-                <li><i class="fa fa-angle-right"></i></li>
-                <li>{{ trans('local.blog') }}</li>
-            </ul>
-        </div>
-    </div>
-    <section class="section80">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-4 text-center blogHeading">
-                    <h1 class="headingWithLogo text-uppercase">{{ trans('local.blog') }}</h1>
-                </div>
-            </div>
-            <div class="row">
-                @foreach($articles as $article)
-                <div class="{{ $loop->index < 2 ? 'col-lg-6 col-md-6 col-sm-6 col-xs-6 mb-4' : 'col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-4'}}">
-                    <div class="homeBlogCard clearfix">
-                        <img src="{{ asset('storage/'.$article->main_image) }}" class="img-fluid fullWidth" alt="{{ $article->{'title_'.$l} }}" title="{{ $article->{'title_'.$l} }}">
-                        <div class="blogCardContent">
-                            <h3>{{ $article->{'title_'.$l} }}</h3>
-                            <p>
-                                {{ $article->{'caption_'.$l} }}
-                            </p>
-                            <a href="{{ route('articles.detail', ['url' => $article->{'url_'.$l}]) }}" class="linkWithLeftBorder">{{ trans('local.readMore') }}</a>
+    <div class="blog">
+        <section class="pt-5 pb-5">
+            <div class="container">
+
+                <div class="row ">
+                    <div class="col-md-6 align-self-center blog-banner-bg" style="height: 100%;">
+
+                        <div class="row h-100 justify-content-center">
+                            <div class="col-md-12 py-5">
+                                <div class="row">
+                                    <div class="col-md-12 px-0"><p class="menuTag">Anasayfa/Blog</p></div>
+                                </div>
+
+                                <div class="row justify-content-end">
+                                    <div class="col-11 blog-title">
+                                        <h1 class="">Blog</h1>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end pt-3">
+                                    <div class="col-11 blog-text">
+                                        <p>Raf Sistemleri ve Zem Raf hakkındaki en son Blog yazılarını paylaşıyoruz.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 align-self-center px-0">
+
+                        <img class="w-100" alt="" src="{{asset("img/blog-banner.jpg")}}">
+                    </div>
                 </div>
-                @endforeach
+
             </div>
-        </div>
-    </section>
-    @include('includes._askOfferParallax')
-    <div class="mt-5 mb-5"></div>
+
+        </section>
+
+        <section>
+            <div class="container bg-grey">
+                <div class="row p-5 justify-content-around">
+                    @foreach($articles as $article)
+
+
+                        <div class="col-lg-3 col-md-6 py-5 px-0 mx-3">
+                            <div class="card-item pb-5 custom-border">
+
+                                <p class="item-no pt-5">&nbsp;{{$article -> created_at->format('d/m/Y')}}</p>
+                                <div class="p-5">
+                                    <h5 class="shorten-news">{{$article ->{'title_'.$l} }}
+
+                                    </h5>
+
+                                    <a href="{{ route('articles.detail', ['url' => $article->{'url_'.$l}]) }}"
+                                       id="see-more-btn" class="mt-3">Daha Fazlası <img class="svg"
+                                                                           src="{{asset("img/see_more_icon.svg")}}"
+                                                                           alt="See More Icon"></a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    </div>
+
+@endsection
+
+@section ('scripts')
+
+    <script src="{{asset('/js/fancy-box.min.js')}}"></script>
+    <script>
+
+        //SVG IMAGES TO XML
+        jQuery('img.svg').each(function () {
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+            jQuery.get(imgURL, function (data) {
+
+                var $svg = jQuery(data).find('svg');
+
+                if (typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+
+                if (typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass + ' replaced-svg');
+                }
+
+                $svg = $svg.removeAttr('xmlns:a');
+
+                $img.replaceWith($svg);
+            }, 'xml');
+        });
+    </script>
+
 @endsection

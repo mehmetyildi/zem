@@ -8,6 +8,10 @@ class Slide extends BaseModel
     protected $fillable = ['title_tr', 'title_en', 'caption_tr', 'caption_en', 'link', 'openInNewTab', 'main_image', 'publish', 'position', 'publish_at', 'publish_until', 'created_by', 'updated_by'];
     public static $rules = array(
     );
+    public static function messages()
+    {
+        return[];
+    }
     public static $updaterules = array(
     );
 
